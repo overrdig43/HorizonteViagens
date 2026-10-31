@@ -1,0 +1,28 @@
+@model IReadOnlyList<PrototipoPim.Modelos.Viagem>
+@{
+    ViewData["Title"] = "Pacotes de viagem";
+}
+
+<div class="container py-4">
+    <h1>Pacotes de viagem</h1>
+    <p>Escolha entre destinos econômicos e pacotes de luxo.</p>
+
+    <div class="row g-3">
+        @foreach (var viagem in Model)
+        {
+            <div class="col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge text-bg-primary">@(viagem is PrototipoPim.Modelos.PacoteLuxo ? "Luxo" : "Econômico")</span>
+                        <h2 class="h5 mt-2">@viagem.Destino</h2>
+                        <p class="mb-1">Duração: @viagem.DuracaoDias dias</p>
+                        <p class="mb-1">@viagem.DetalhesEspecificos</p>
+                        <strong>R$ @viagem.Preco.ToString("N2")</strong>
+                    </div>
+                </article>
+            </div>
+        }
+    </div>
+
+    <p class="mt-4">Para realizar o cadastro, envie os dados para <code>POST /api/clientes</code>. Consulte <code>GET /api/viagens</code> para os IDs dos pacotes.</p>
+</div>

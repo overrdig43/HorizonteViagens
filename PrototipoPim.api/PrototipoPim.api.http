@@ -1,0 +1,6 @@
+@PrototipoPim.api_HostAddress = http://localhost:5208
+
+GET {{PrototipoPim.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

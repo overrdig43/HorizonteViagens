@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="HorizonteViagens/HorizonteViagens.csproj" />
+  <Folder Name="/Prototipo/">
+    <Project Path="PrototipoPim.Modelos/PrototipoPim.Modelos.csproj" />
+    <Project Path="PrototipoPim.Repositorio/PrototipoPim.Repositorio.csproj" />
+    <Project Path="PrototipoPim.RegraDeNegocio/PrototipoPim.RegraDeNegocio.csproj" />
+    <Project Path="PrototipoPim.api/PrototipoPim.api.csproj" />
+    <Project Path="PrototipoPim.web/PrototipoPim.web.csproj" />
+  </Folder>
+</Solution>
